@@ -13,7 +13,7 @@ Directory /cs contains Czech version of CCMM Application Profile specification. 
 
 ## en
 
-Directory /en contains English version of CCMM Application Profile specification. Specification is available on [https://techlib.github.io/CCMM/cs/](https://techlib.github.io/CCMM/en/).
+Directory /en contains English version of CCMM Application Profile specification. Specification is available on [https://techlib.github.io/CCMM/en/](https://techlib.github.io/CCMM/en/).
 
 ## XSD representation
 
