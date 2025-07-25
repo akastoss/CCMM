@@ -7,6 +7,8 @@ DataSpecer generates a schema diagram in bad resolution; therefore, we generated
 
 The structure of the repository is as follows. For the documentation and publication purposes were created GitHub pages. In each section, there is a link to the published specifications.
 
+The CCMM model is licensed under [CC BY](https://creativecommons.org/licenses/by/4.0/) license.
+
 ## cs
 
 Directory /cs contains Czech version of CCMM Application Profile specification. Specification is available on [https://techlib.github.io/CCMM/cs/](https://techlib.github.io/CCMM/cs/).
