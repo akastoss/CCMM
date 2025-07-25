@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/time-instant" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-date-type="https://schema.ccmm.cz/date-type" xmlns:ccmm-time-instant="https://schema.ccmm.cz/time-instant" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
-  <xs:include schemaLocation="../date-type/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/date-type" schemaLocation="../date-type/schema.xsd"/>
   <xs:complexType name="time_instant" sawsdl:modelReference="http://www.w3.org/2006/time#Instant">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -27,7 +27,7 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element name="date_type" type="date_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasType">
+      <xs:element name="date_type" type="ccmm-date-type:date_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has date type - Reference to the codelist of date types.
@@ -40,5 +40,5 @@
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="time_instant" type="time_instant"/>
+  <xs:element name="time_instant" type="ccmm-time-instant:time_instant"/>
 </xs:schema>

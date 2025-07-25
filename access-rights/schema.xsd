@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/access-rights" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-ar="https://schema.ccmm.cz/access-rights" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
   <xs:complexType name="access_rights" sawsdl:modelReference="http://purl.org/dc/terms/RightsStatement">
     <xs:annotation>
@@ -25,5 +25,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="access_rights" type="access_rights"/>
+  <xs:element name="access_rights" type="ccmm-ar:access_rights"/>
 </xs:schema>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:include schemaLocation="../agent/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/resource-to-agent-relationship" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-agent="https://schema.ccmm.cz/agent" xmlns:ccmm-rtar="https://schema.ccmm.cz/resource-to-agent-relationship" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="https://schema.ccmm.cz/agent" schemaLocation="../agent/schema.xsd"/>
   <xs:complexType name="resource_to_agent_relationship" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#ResourceToAgentRelationship">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -28,7 +28,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="relation" type="agent" sawsdl:modelReference="http://purl.org/dc/terms/relation">
+      <xs:element name="relation" type="ccmm-agent:agent" sawsdl:modelReference="http://purl.org/dc/terms/relation">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has related agent - Specifies the agent an a given role in the relationship with the resource.
@@ -37,5 +37,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="resource_to_agent_relationship" type="resource_to_agent_relationship"/>
+  <xs:element name="resource_to_agent_relationship" type="ccmm-rtar:resource_to_agent_relationship"/>
 </xs:schema>

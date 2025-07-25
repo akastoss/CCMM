@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:include schemaLocation="../description-type/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/description" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-desc-type="https://schema.ccmm.cz/description-type" xmlns:ccmm-description="https://schema.ccmm.cz/description" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="https://schema.ccmm.cz/description-type" schemaLocation="../description-type/schema.xsd"/>
   <xs:complexType name="description" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#Description">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -16,7 +16,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="has_description_type" type="description_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescriptionType">
+      <xs:element minOccurs="0" name="has_description_type" type="ccmm-desc-type:description_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescriptionType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has description type - Relation to the type of the description.
@@ -25,5 +25,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="description" type="description"/>
+  <xs:element name="description" type="ccmm-description:description"/>
 </xs:schema>

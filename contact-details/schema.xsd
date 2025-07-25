@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:include schemaLocation="../address/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/contact-details" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-address="https://schema.ccmm.cz/address" xmlns:ccmm-cd="https://schema.ccmm.cz/contact-details" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="https://schema.ccmm.cz/address" schemaLocation="../address/schema.xsd"/>
   <xs:complexType name="contact_details" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#ContactDetails">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -30,7 +30,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="address" type="address" sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#hasAddress">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="address" type="ccmm-address:address" sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#hasAddress">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has address - To specify the components of the delivery address for the object
@@ -39,5 +39,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="contact_details" type="contact_details"/>
+  <xs:element name="contact_details" type="ccmm-cd:contact_details"/>
 </xs:schema>

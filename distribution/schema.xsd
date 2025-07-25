@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/distribution" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-doc="https://schema.ccmm.cz/documentation" xmlns:ccmm-ap="https://schema.ccmm.cz/application-profile" xmlns:ccmm-ds="https://schema.ccmm.cz/data-service" xmlns:ccmm-checksum="https://schema.ccmm.cz/checksum" xmlns:ccmm-mt="https://schema.ccmm.cz/media-type" xmlns:ccmm-file="https://schema.ccmm.cz/file" xmlns:ccmm-format="https://schema.ccmm.cz/format" xmlns:ccmm-distribution="https://schema.ccmm.cz/distribution" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
-  <xs:include schemaLocation="../documentation/schema.xsd"/>
-  <xs:include schemaLocation="../application-profile/schema.xsd"/>
-  <xs:include schemaLocation="../data-service/schema.xsd"/>
-  <xs:include schemaLocation="../checksum/schema.xsd"/>
-  <xs:include schemaLocation="../media-type/schema.xsd"/>
-  <xs:include schemaLocation="../file/schema.xsd"/>
-  <xs:include schemaLocation="../format/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/documentation" schemaLocation="../documentation/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/application-profile" schemaLocation="../application-profile/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/data-service" schemaLocation="../data-service/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/checksum" schemaLocation="../checksum/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/media-type" schemaLocation="../media-type/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/file" schemaLocation="../file/schema.xsd"/>
+  <xs:import namespace="https://schema.ccmm.cz/format" schemaLocation="../format/schema.xsd"/>
   <xs:complexType name="distribution">
     <xs:choice>
       <xs:element name="distribution_-_data_service">
@@ -47,21 +47,21 @@
                 </xs:simpleContent>
               </xs:complexType>
             </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="documentation" type="documentation" sawsdl:modelReference="http://xmlns.com/foaf/0.1/page">
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="documentation" type="ccmm-doc:documentation" sawsdl:modelReference="http://xmlns.com/foaf/0.1/page">
               <xs:annotation>
                 <xs:documentation xml:lang="en">
                   has documentation - A page or document about this Distribution.
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="specification" type="application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="specification" type="ccmm-ap:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
               <xs:annotation>
                 <xs:documentation xml:lang="en">
                   conforms to specification - An established standard to which the distribution conforms.
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="access_service" type="data_service" sawsdl:modelReference="http://www.w3.org/ns/dcat#accessService">
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="access_service" type="ccmm-ds:data_service" sawsdl:modelReference="http://www.w3.org/ns/dcat#accessService">
               <xs:annotation>
                 <xs:documentation xml:lang="cs">
                   služba pro přístup k datům - Umístění či přístupový bod zpřístupňující distribuci datové sady.
@@ -113,21 +113,21 @@
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="checksum" type="checksum" sawsdl:modelReference="http://spdx.org/rdf/terms#checksum">
+            <xs:element minOccurs="0" name="checksum" type="ccmm-checksum:checksum" sawsdl:modelReference="http://spdx.org/rdf/terms#checksum">
               <xs:annotation>
                 <xs:documentation xml:lang="en">
                   has checksum - A mechanism that can be used to verify that the contents of a distribution have not changed.
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_schema" type="application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_schema" type="ccmm-ap:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
               <xs:annotation>
                 <xs:documentation xml:lang="en">
                   conforms to schema - An established standard to which the distribution conforms.
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="media_type" type="media_type" sawsdl:modelReference="http://www.w3.org/ns/dcat#mediaType">
+            <xs:element minOccurs="0" name="media_type" type="ccmm-mt:media_type" sawsdl:modelReference="http://www.w3.org/ns/dcat#mediaType">
               <xs:annotation>
                 <xs:documentation xml:lang="ar">
                   نوع الميديا - يجب استخدام هذه الخاصية إذا كان نوع الملف معرف ضمن IANA
@@ -158,7 +158,7 @@
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element maxOccurs="unbounded" name="access_url" type="file" sawsdl:modelReference="http://www.w3.org/ns/dcat#accessURL">
+            <xs:element maxOccurs="unbounded" name="access_url" type="ccmm-file:file" sawsdl:modelReference="http://www.w3.org/ns/dcat#accessURL">
               <xs:annotation>
                 <xs:documentation xml:lang="ar">
                   رابط وصول - أي رابط يتيح الوصول إلى البيانات. إذا كان الرابط هو ربط مباشر لملف يمكن تحميله استخدم الخاصية downloadURL
@@ -189,7 +189,7 @@
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="download_url" type="file" sawsdl:modelReference="http://www.w3.org/ns/dcat#downloadURL">
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="download_url" type="ccmm-file:file" sawsdl:modelReference="http://www.w3.org/ns/dcat#downloadURL">
               <xs:annotation>
                 <xs:documentation xml:lang="ar">
                   رابط تحميل - رابط مباشر لملف يمكن تحميله. نوع الملف يتم توصيفه باستخدام الخاصية dcterms:format dcat:mediaType 
@@ -220,7 +220,7 @@
                 </xs:documentation>
               </xs:annotation>
             </xs:element>
-            <xs:element name="format" type="format" sawsdl:modelReference="http://purl.org/dc/terms/format">
+            <xs:element name="format" type="ccmm-format:format" sawsdl:modelReference="http://purl.org/dc/terms/format">
               <xs:annotation>
                 <xs:documentation xml:lang="en">
                   has format - The file format of the distribution.
@@ -232,5 +232,5 @@
       </xs:element>
     </xs:choice>
   </xs:complexType>
-  <xs:element name="distribution" type="distribution"/>
+  <xs:element name="distribution" type="ccmm-distribution:distribution"/>
 </xs:schema>

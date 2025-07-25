@@ -1,5 +1,9 @@
 CHANGELOG
 ---------------------------------------
+### 2025-07-25 - Minor changes, bug fixes
+* XSD schemas got namespaces
+* bug fixes
+
 ### 2025-06-30 - Official release 1.0.0
 * base IRI changed to https://model.ccmm.cz/research-data/
 * definitions and usage notes updated and synced for the best possible understanding of end-users

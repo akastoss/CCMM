@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/resource-relation-type" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-rrt="https://schema.ccmm.cz/resource-relation-type" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
   <xs:complexType name="resource_relation_type" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
     <xs:annotation>
@@ -25,5 +25,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="resource_relation_type" type="resource_relation_type"/>
+  <xs:element name="resource_relation_type" type="ccmm-rrt:resource_relation_type"/>
 </xs:schema>
