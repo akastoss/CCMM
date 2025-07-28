@@ -98,7 +98,7 @@
           <xs:documentation xml:lang="en"> title - A name given to the dataset. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="has_description"
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="description"
         type="ccmm-description:description"
         sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescription">
         <xs:annotation>
