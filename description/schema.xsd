@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/description" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-desc-type="https://schema.ccmm.cz/description-type" xmlns:ccmm-description="https://schema.ccmm.cz/description" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:import namespace="https://schema.ccmm.cz/description-type" schemaLocation="../description-type/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/description"
+  xmlns:ccmm-desc-type="https://schema.ccmm.cz/description-type"
+  xmlns:ccmm-description="https://schema.ccmm.cz/description"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="https://schema.ccmm.cz/description-type"
+    schemaLocation="../description-type/schema.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/XML/1998/namespace"/>
-  <xs:complexType name="description" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#Description">
+  <xs:complexType name="description"
+    sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#Description">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Description - All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.
@@ -11,7 +18,8 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element name="description_text" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#descriptionText">
+      <xs:element name="description_text"
+        sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#descriptionText">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             description text - Text describing the resource.
@@ -20,12 +28,13 @@
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:string">
-              <xs:attribute ref="xml:lang" use="required"/>
+              <xs:attribute ref="xml:lang" use="optional"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element minOccurs="0" name="description_type" type="ccmm-desc-type:description_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescriptionType">
+      <xs:element minOccurs="0" name="description_type" type="ccmm-desc-type:description_type"
+        sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasDescriptionType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has description type - Relation to the type of the description.
