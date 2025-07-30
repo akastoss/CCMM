@@ -28,8 +28,7 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="geography_markup_language_object"
-        type="gml:AbstractGeometryType"
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="gml:AbstractGeometry"
         sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asGML">
         <xs:annotation>
           <xs:documentation xml:lang="en"> geography markup language literal - Representation of
