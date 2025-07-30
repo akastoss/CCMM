@@ -44,7 +44,7 @@
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:string">
-              <xs:attribute name="name" type="xs:anyURI" use="optional"/>
+              <xs:attribute name="srsName" type="xs:anyURI" use="optional"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
