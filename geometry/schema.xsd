@@ -31,14 +31,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="gml:AbstractGeometry"
         sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asGML">
         <xs:annotation>
-          <xs:documentation xml:lang="en"> geography markup language literal - Representation of
-            geometry object as GML Literal. </xs:documentation>
+          <xs:documentation xml:lang="en"> GML - Representation of
+            geometry object as any GML Literal. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="well_known_text_literal"
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="wkt"
         type="xs:string" sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asWKT">
         <xs:annotation>
-          <xs:documentation xml:lang="en"> well known text literal - Representation of geometry
+          <xs:documentation xml:lang="en"> WKT - Representation of geometry
             object as WKT Literal. </xs:documentation>
         </xs:annotation>
       </xs:element>
