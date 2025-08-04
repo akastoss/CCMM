@@ -1,5 +1,9 @@
 CHANGELOG
 ---------------------------------------
+### 2025-08-04 - Minor release
+* published sample XML metadata file
+* minor changes in XSD
+
 ### 2025-07-25 - Minor changes, bug fixes
 * XSD schemas got namespaces
 * bug fixes
