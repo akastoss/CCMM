@@ -30,7 +30,7 @@
           <xs:documentation xml:lang="en"> name - Name of the spatial location. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="geometry" type="ccmm-geometry:geometry"
+      <xs:element minOccurs="0" name="geometry" type="ccmm:geometry"
         sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
         <xs:annotation>
           <xs:documentation xml:lang="en"> has geometry - The corresponding geometry for a resource.
