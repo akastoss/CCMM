@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/metadata-record" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-repository="https://schema.ccmm.cz/repository" xmlns:ccmm-ap="https://schema.ccmm.cz/application-profile" xmlns:ccmm-rtar="https://schema.ccmm.cz/resource-to-agent-relationship" xmlns:ccmm-lang="https://schema.ccmm.cz/language-system" xmlns:ccmm-mdr="https://schema.ccmm.cz/metadata-record" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:import namespace="https://schema.ccmm.cz/repository" schemaLocation="../repository/schema.xsd"/>
-  <xs:import namespace="https://schema.ccmm.cz/application-profile" schemaLocation="../application-profile/schema.xsd"/>
-  <xs:import namespace="https://schema.ccmm.cz/resource-to-agent-relationship" schemaLocation="../resource-to-agent-relationship/schema.xsd"/>
-  <xs:import namespace="https://schema.ccmm.cz/language-system" schemaLocation="../language-system/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.0.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.0.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:include schemaLocation="../repository/schema.xsd"/>
+  <xs:include schemaLocation="../application-profile/schema.xsd"/>
+  <xs:include schemaLocation="../resource-to-agent-relationship/schema.xsd"/>
+  <xs:include schemaLocation="../language-system/schema.xsd"/>
   <xs:complexType name="metadata_record" sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
     <xs:annotation>
       <xs:documentation xml:lang="ar">
@@ -50,21 +50,21 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="original_repository" type="ccmm-repository:repository" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#originalRepository">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="original_repository" type="ccmm:repository" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#originalRepository">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has original repository - Link to the repository in which the metadata were originally stored and curated.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard" type="ccmm-ap:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard" type="ccmm:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             conforms to standard - An established standard to which the metadata record conforms.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" name="qualified_relation" type="ccmm-rtar:resource_to_agent_relationship">
+      <xs:element maxOccurs="unbounded" name="qualified_relation" type="ccmm:resource_to_agent_relationship">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             kvalifikovaný vztah - Odkaz na popis vztahu s jiným zdrojem.
@@ -83,7 +83,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="language" type="ccmm-lang:language_system" sawsdl:modelReference="http://purl.org/dc/terms/language">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="language" type="ccmm:language_system" sawsdl:modelReference="http://purl.org/dc/terms/language">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             language - A language used in the textual metadata describing titles, descriptions of the metadata record.
@@ -92,5 +92,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="metadata_record" type="ccmm-mdr:metadata_record"/>
+  <xs:element name="metadata_record" type="ccmm:metadata_record"/>
 </xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/language-system" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm-lang="https://schema.ccmm.cz/language-system" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.0.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.0.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
   <xs:complexType name="language_system" sawsdl:modelReference="http://purl.org/dc/terms/LinguisticSystem">
     <xs:annotation>
@@ -25,5 +25,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="language_system" type="ccmm-lang:language_system"/>
+  <xs:element name="language_system" type="ccmm:language_system"/>
 </xs:schema>

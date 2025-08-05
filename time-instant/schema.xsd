@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
-  elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/time-instant"
-  xmlns:ccmm-date-type="https://schema.ccmm.cz/date-type"
-  xmlns:ccmm-time-instant="https://schema.ccmm.cz/time-instant"
-  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-    schemaLocation="http://www.w3.org/XML/1998/namespace"/>
-  <xs:import namespace="https://schema.ccmm.cz/date-type" schemaLocation="../date-type/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.0.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.0.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/XML/1998/namespace"/>
   <xs:complexType name="time_instant" sawsdl:modelReference="http://www.w3.org/2006/time#Instant">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -19,8 +12,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" name="date_information"
-        sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#dateInformation">
+      <xs:element minOccurs="0" name="date_information" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#dateInformation">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             date information - Additional information to the date in text form.
@@ -35,12 +27,10 @@
         </xs:complexType>
       </xs:element>
       <xs:choice>
-        <xs:element name="date_time" type="xs:dateTime"
-          sawsdl:modelReference="http://www.w3.org/2006/time#inXSDDateTime"/>
-        <xs:element name="date" type="xs:date"
-          sawsdl:modelReference="http://www.w3.org/2006/time#inXSDDate"/>
+        <xs:element name="date_time" type="xs:dateTime" sawsdl:modelReference="http://www.w3.org/2006/time#inXSDDateTime"/>
+        <xs:element name="date" type="xs:date" sawsdl:modelReference="http://www.w3.org/2006/time#inXSDDate"/>
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="time_instant" type="ccmm-time-instant:time_instant"/>
+  <xs:element name="time_instant" type="ccmm:time_instant"/>
 </xs:schema>

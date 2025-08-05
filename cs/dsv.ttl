@@ -1889,7 +1889,7 @@
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/datacite#descriptionText>;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://model.ccmm.cz/research-data/Description.hasDescriptionType> dsv:domain :Description;
     dct:isPartOf <https://model.ccmm.cz/research-data/>;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:gml="http://www.opengis.net/gml/3.2" vc:minVersion="1.1"
-  elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/geometry"
-  xmlns:ccmm-geometry="https://schema.ccmm.cz/geometry" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:gml="http://www.opengis.net/gml/3.2"
+  vc:minVersion="1.1" elementFormDefault="qualified"
+  targetNamespace="https://schema.ccmm.cz/research-data/1.0.0"
+  xmlns:ccmm="https://schema.ccmm.cz/research-data/1.0.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.opengis.net/gml/3.2"
     schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
@@ -31,15 +32,15 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="gml:AbstractGeometry"
         sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asGML">
         <xs:annotation>
-          <xs:documentation xml:lang="en"> GML - Representation of
-            geometry object as any GML Literal. </xs:documentation>
+          <xs:documentation xml:lang="en"> GML - Representation of geometry object as any GML
+            Literal. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="wkt"
         sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asWKT">
         <xs:annotation>
-          <xs:documentation xml:lang="en"> WKT - Representation of geometry
-            object as WKT Literal. </xs:documentation>
+          <xs:documentation xml:lang="en"> WKT - Representation of geometry object as WKT Literal.
+          </xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:simpleContent>
@@ -51,5 +52,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="geometry" type="ccmm-geometry:geometry"/>
+  <xs:element name="geometry" type="ccmm:geometry"/>
 </xs:schema>
