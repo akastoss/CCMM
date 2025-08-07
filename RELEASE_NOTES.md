@@ -1,8 +1,11 @@
 CHANGELOG
 ---------------------------------------
-### 2025-08-04 - Minor release
+### 2025-08-04 - Minor release 1.0.1
 * published sample XML metadata file
-* minor changes in XSD
+* minor changes in structure (added label etc.)
+* updated representation of abstract geometry in location
+* XSDs under namespace https://schema.ccmm.cz/research-data/1.0
+
 
 ### 2025-07-25 - Minor changes, bug fixes
 * XSD schemas got namespaces
